@@ -83,10 +83,10 @@ class _HomeScreenState extends State<HomeScreen> {
               ),
               GestureDetector(
                 onTap: () {
-                  double h = double.parse(_heightController.text);
-                  double w = double.parse(_weightController.text);
+                  double _h = double.parse(_heightController.text);
+                  double _w = double.parse(_weightController.text);
                   setState(() {
-                    _bmiResult = w / (h * h);
+                    _bmiResult = _w / (_h * _h);
                     if (_bmiResult > 25) {
                       _textResult = "You\'re over weight";
                     } else if (_bmiResult >= 18.5 && _bmiResult <= 25) {
@@ -101,7 +101,7 @@ class _HomeScreenState extends State<HomeScreen> {
                     "Calculate",
                     style: TextStyle(
                         fontSize: 22,
-                        decoration:TextDecoration.underline,
+                        decoration: TextDecoration.underline,
                         fontWeight: FontWeight.bold,
                         color: lightHexColor),
                   ),
